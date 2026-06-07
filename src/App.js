@@ -3,8 +3,8 @@ import * as pdfjsLib from "pdfjs-dist";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`;
 
+const GROQ_API_KEY = process.env.REACT_APP_GROQ_KEY;
 
-const GROQ_API_KEY = "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";
 
 async function pdfToText(file) {
   const arrayBuffer = await file.arrayBuffer();
